@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ExercicePhysiqueModule } from './exercise-physique/exercise-physique.module';
+import { ActivatedRoute } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,4 +20,8 @@ import { ExercicePhysiqueModule } from './exercise-physique/exercise-physique.mo
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(
+    private route: ActivatedRoute,
+  ) {}
+}

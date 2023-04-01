@@ -9,7 +9,6 @@ const routes: Routes = [
     title: 'Bicebs Exercises',
   },
 ];
-
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
