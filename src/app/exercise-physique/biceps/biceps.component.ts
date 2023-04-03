@@ -10,14 +10,16 @@ import {HttpParams} from "@angular/common/http";
 export class BicepsComponent {
   data: any;
   url: string = 'https://api.api-ninjas.com/v1/exercises?muscle=biceps';
+  isLoading: boolean = false;
 
   constructor(private dataService: GetDataService) {}
   index: number = 1;
 
   getData() {
+    this.isLoading = true;
     this.dataService.getConfig(this.url).subscribe((data) => {
       this.data = data;
-      console.log(data);
+      this.isLoading = false;
     });
   }
 

@@ -1,28 +1,60 @@
-.button {
-    box-shadow: inset 0 1px 0 0 #ffffff;
-    background: #ffffff linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-    border-radius: 6px;
-    border: 1px solid #dcdcdc;
+body{
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+    font-family: 'poppins', 'sans-serif';
+}
+$primary-color : #162221;
+$secondary-color : #1AB7EA;
+$third-color : #000000;
+$fourth-color : #FFFFFF;
+.truncate_text{
+    --max-lines:5;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines);
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20%;
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding: 20px;
+    margin-bottom: 20px;
+    .link{
+        margin-right: 100px;
+    }
+}
+main{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.navbar .button {
     display: inline-block;
+    height: 35px;
+    background: transparent;
+    border: 2px solid $third-color;
+    border-radius: 5px;
     cursor: pointer;
     color: #666666;
-    font-family: Arial, sans-serif;
     font-size: 15px;
-    font-weight: bold;
     padding: 6px 24px;
+    margin: 0 5px;
     text-decoration: none;
-    text-shadow: 0 1px 0 #ffffff;
-    outline: 0;
-    transition: color 1sec;
-    margin: 0px 10px;
+    transition: background 1sec;
+    &:hover{
+        background: lighten($color: $primary-color, $amount: 5) ;
+    }
+    &.active{
+        border: 1px solid $secondary-color;
+        color: $secondary-color;
+    }
 }
-.button:hover{
-    color: #333333;
-}
-.active{
-    box-shadow: inset 0 1px 0 0 #dcecfb;
-    background: #bddbfa linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
-    border: 1px solid #84bbf3;
-    color: #ffffff;
-    text-shadow: 0 1px 0 #528ecc;
+.container{
+    color: $fourth-color;
+    background-color: $primary-color;
+    border-radius: 5px;
 }

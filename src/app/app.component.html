@@ -1,15 +1,31 @@
-<h1>Biceps</h1>
-<nav>
-  <a class="button"
-     routerLink="/"
-     routerLinkActive="active"
-     href="#">
-    Home
-  </a> |
-  <a class="button" routerLink="/exercices" routerLinkActive="active"> 
-    Exercices Physique
-  </a>
+<nav class="navbar">
+  <h1>Biceps</h1>
+  <div class="link">
+    <a class="button"
+        routerLink="/"
+        routerLinkActive="active"
+        href="#">
+        Home
+    </a>
+    <a class="button" routerLink="/exercices" routerLinkActive="active" > 
+      Exercices Physique
+    </a>
+  </div>
 </nav>
 <main >
   <router-outlet></router-outlet>
 </main>
+<div class="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque omnis alias voluptatem, facilis aut sunt eum voluptates, culpa cum ipsum nam neque voluptas pariatur dolor dolores provident libero debitis. Repudiandae!</p>
+          <a href="https://github.com/Biceps/Biceps" target="_blank">
+            <img src="https://img.shields.io/github/stars/Biceps/Biceps.svg?style=social" alt="GitHub stars">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
