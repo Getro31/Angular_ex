@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { GetDataService } from '../../services/get-data.service';
-import {HttpParams} from "@angular/common/http";
+import { Select, Store } from '@ngxs/store';
+import { getDataAction } from 'src/app/store/data.actions';
+import { dataState } from 'src/app/store/data.state';
+import { Observable } from 'rxjs';
+import { dataInterface } from 'src/app/models/data.model';
 
 @Component({
   selector: 'app-biceps',
@@ -8,22 +12,30 @@ import {HttpParams} from "@angular/common/http";
   styleUrls: ['./biceps.component.scss']
 })
 export class BicepsComponent {
-  data: any;
-  url: string = 'https://api.api-ninjas.com/v1/exercises?muscle=biceps';
+
+  data: dataInterface[] = [];
+
   isLoading: boolean = false;
 
-  constructor(private dataService: GetDataService) {}
-  index: number = 1;
-
-  getData() {
-    this.isLoading = true;
-    this.dataService.getConfig(this.url).subscribe((data) => {
-      this.data = data;
-      this.isLoading = false;
-    });
-  }
+  constructor(private dataService: GetDataService,
+              private store: Store) {}
 
   ngOnInit() {
-    this.getData();
+    this.getAction();
   }
+
+  @Select(dataState.getDataSelector) dataObj$!: Observable<dataInterface[]> | undefined
+  getAction(){
+    this.dataObj$?.subscribe((data: any) => {
+      this.data = data;
+      this.isLoading = false;
+    })
+    if(this.data.length === 0)
+    {
+      this.isLoading = true;
+      this.store.dispatch(new getDataAction);
+    }
+
+  }
+
 }

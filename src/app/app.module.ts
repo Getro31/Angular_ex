@@ -8,6 +8,7 @@ import { ExercicePhysiqueModule } from './exercise-physique/exercise-physique.mo
 import { ActivatedRoute } from '@angular/router';
 
 import { NgxsModule } from '@ngxs/store';
+import { dataState } from './store/data.state';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { NgxsModule } from '@ngxs/store';
     HttpClientModule,
     AppRoutingModule,
     ExercicePhysiqueModule,
+    NgxsModule.forRoot([dataState])
   ],
   providers: [],
   bootstrap: [AppComponent]
