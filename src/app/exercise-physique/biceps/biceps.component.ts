@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { GetDataService } from '../../services/get-data.service';
+import { Component } from '@angular/core';gi
 import { Select, Store } from '@ngxs/store';
 import { getDataAction } from 'src/app/store/data.actions';
 import { dataState } from 'src/app/store/data.state';
@@ -16,7 +15,7 @@ export class BicepsComponent {
 
   isLoading: boolean = false;
 
-  constructor(private dataService: GetDataService, private store: Store) {}
+  constructor(private store: Store) {}
 
   ngOnInit() {
     this.getAction();
