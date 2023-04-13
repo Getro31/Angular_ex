@@ -1,4 +1,4 @@
-export interface dataInterface{
+export interface dataInterface {
   name?: string;
   type?: string;
   muscle?: string;
@@ -7,6 +7,6 @@ export interface dataInterface{
   instructions?: string;
 }
 
-export interface dataStateModel{
-  itemState : dataInterface[];
+export interface dataStateModel {
+  itemState: dataInterface[];
 }

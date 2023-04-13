@@ -12,12 +12,12 @@ const routes: Routes = [
       ),
   },
   {
-    path: '', 
-    redirectTo: '/Home', 
-    pathMatch: 'full' 
+    path: '',
+    redirectTo: '/Home',
+    pathMatch: 'full',
   },
-  {path: 'Home', title: 'Home', component: HomeComponent},
-  {path: '**', component: PageNotFoundComponent}
+  { path: 'Home', title: 'Home', component: HomeComponent },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({

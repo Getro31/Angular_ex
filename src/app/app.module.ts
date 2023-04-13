@@ -11,21 +11,17 @@ import { NgxsModule } from '@ngxs/store';
 import { dataState } from './store/data.state';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     ExercicePhysiqueModule,
-    NgxsModule.forRoot([dataState])
+    NgxsModule.forRoot([dataState]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
-  constructor(
-    private route: ActivatedRoute,
-  ) {}
+  constructor(private route: ActivatedRoute) {}
 }

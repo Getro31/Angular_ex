@@ -5,19 +5,9 @@ import { BicepsComponent } from './biceps/biceps.component';
 import { GetDataService } from '../services/get-data.service';
 import { InterceptorProviders } from './InterceptorProviders';
 
-
-
 @NgModule({
-  declarations: [
-    BicepsComponent
-  ],
-  imports: [
-    CommonModule,
-    exercice_physiqueRouting
-  ],
-  providers: [
-    GetDataService,
-    InterceptorProviders
-  ]
+  declarations: [BicepsComponent],
+  imports: [CommonModule, exercice_physiqueRouting],
+  providers: [GetDataService, InterceptorProviders],
 })
-export class ExercicePhysiqueModule { }
+export class ExercicePhysiqueModule {}

@@ -1,60 +1,60 @@
-body{
-    margin: 0;
-    padding: 0 ;
-    box-sizing: border-box;
-    font-family: 'poppins', 'sans-serif';
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", "sans-serif";
 }
-$primary-color : #162221;
-$secondary-color : #1AB7EA;
-$third-color : #000000;
-$fourth-color : #FFFFFF;
-.truncate_text{
-    --max-lines:5;
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: var(--max-lines);
+$primary-color: #162221;
+$secondary-color: #1ab7ea;
+$third-color: #000000;
+$fourth-color: #ffffff;
+.truncate_text {
+  --max-lines: 5;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--max-lines);
 }
-.navbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 20%;
-    background-color: $primary-color;
-    color: $secondary-color;
-    padding: 20px;
-    margin-bottom: 20px;
-    .link{
-        margin-right: 100px;
-    }
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20%;
+  background-color: $primary-color;
+  color: $secondary-color;
+  padding: 20px;
+  margin-bottom: 20px;
+  .link {
+    margin-right: 100px;
+  }
 }
-main{
-    padding: 10px;
-    margin-bottom: 10px;
+main {
+  padding: 10px;
+  margin-bottom: 10px;
 }
 .navbar .button {
-    display: inline-block;
-    height: 35px;
-    background: transparent;
-    border: 2px solid $third-color;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #666666;
-    font-size: 15px;
-    padding: 6px 24px;
-    margin: 0 5px;
-    text-decoration: none;
-    transition: background 1sec;
-    &:hover{
-        background: lighten($color: $primary-color, $amount: 5) ;
-    }
-    &.active{
-        border: 1px solid $secondary-color;
-        color: $secondary-color;
-    }
+  display: inline-block;
+  height: 35px;
+  background: transparent;
+  border: 2px solid $third-color;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #666666;
+  font-size: 15px;
+  padding: 6px 24px;
+  margin: 0 5px;
+  text-decoration: none;
+  transition: background 1sec;
+  &:hover {
+    background: lighten($color: $primary-color, $amount: 5);
+  }
+  &.active {
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
+  }
 }
-.container{
-    color: $fourth-color;
-    background-color: $primary-color;
-    border-radius: 5px;
+.container {
+  color: $fourth-color;
+  background-color: $primary-color;
+  border-radius: 5px;
 }

@@ -16,8 +16,10 @@ export class TokenInterceptor implements HttpInterceptor {
     return this.apiKey.getApiKey();
   }
 
-  intercept(request: HttpRequest<unknown>,next: HttpHandler): Observable<HttpEvent<unknown>> {
-
+  intercept(
+    request: HttpRequest<unknown>,
+    next: HttpHandler
+  ): Observable<HttpEvent<unknown>> {
     const apiKey = this.getApiKey();
     const cloneReq = request.clone({
       headers: request.headers.set('X-Api-Key', apiKey),

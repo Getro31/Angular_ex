@@ -7,10 +7,9 @@ import { dataInterface } from '../models/data.model';
   providedIn: 'root',
 })
 export class GetDataService {
-
   constructor(private http: HttpClient) {}
 
-  getConfig(){
+  getConfig() {
     return this.http.get<dataInterface>(environment.apiUrl);
   }
 }
