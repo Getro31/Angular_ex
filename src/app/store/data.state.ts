@@ -1,5 +1,5 @@
 import { Action, Selector, State, StateContext } from "@ngxs/store";
-import { dataStateModel, dataInterface } from "../models/data.model";
+import { dataInterface, dataStateModel } from "../models/data.model";
 import { Injectable } from "@angular/core";
 import { getDataAction } from "./data.actions";
 import { GetDataService } from "../services/get-data.service";
@@ -9,7 +9,7 @@ import { tap } from "rxjs";
 @State<dataStateModel>({
   name: "data",
   defaults: {
-    itemState: []
+    itemState:[]
   }
 })
 

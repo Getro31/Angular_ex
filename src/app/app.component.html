@@ -2,12 +2,13 @@
   <h1>Biceps</h1>
   <div class="link">
     <a class="button"
-        routerLink="/"
+        routerLink="/Home"
         routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact : true}"
         href="#">
         Home
     </a>
-    <a class="button" routerLink="/exercices" routerLinkActive="active" > 
+    <a class="button" routerLink="/exercices" routerLinkActive="active" >
       Exercices Physique
     </a>
   </div>
