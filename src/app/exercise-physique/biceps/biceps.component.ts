@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';gi
+import { Component } from '@angular/core';
 import { Select, Store } from '@ngxs/store';
 import { getDataAction } from 'src/app/store/data.actions';
 import { dataState } from 'src/app/store/data.state';
